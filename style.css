@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    color: #F1F8E9;
+}
+
+section, .right, .left, .social, .social i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-image: url('image/2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.section-wrap {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 75vh;
+    width: 75%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 50px 100px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.header-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.header-logo span {
+    color: #28292a;
+}
+
+.nav-items {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-items::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%) scaleX(0);
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transition: 0.3s;
+    box-shadow: 0 0 3px #F1F8E9;
+}
+
+.nav-items:hover:before {
+    transform: translate(-50%) scaleX(1);
+}
+
+.nav-items:hover {
+    text-shadow: 0 0 10px #F1F8E9;
+}
+
+.header-cta-btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid #F1F8E9;
+    padding: 10px 40px;
+    border-radius: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-cta-btn:hover {
+    background-color: #28292a;
+    border-color: #28292a;
+    box-shadow: 0 0 50px #F1F8E9;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left {
+    flex-direction: column;
+    align-items: start;
+}
+
+.main-text {
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.main-text span {
+    color: #28292a;
+}
+
+.sub-text {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: rgba(241, 248, 233, 0.8);
+    margin-bottom: 50px;
+}
+
+.hero-cta-btn {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 50px;
+    background-color: #28292a;
+    color: #F1F8E9;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 30px;
+    margin-right: 20px;
+}
+
+.hero-cta-btn:hover {
+    box-shadow: 0 0 80px #F1F8E9;
+}
+
+.right img {
+    width: 80%;
+    border-radius: 25px;
+    margin: 10px 5px;
+}
+
+.social i {
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    border: 1px solid #F1F8E9;
+    border-radius: 25px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social i:hover {
+    border-color: #28292a;
+    box-shadow: 0 0 25px #F1F8E9;
+    text-shadow: 0 0 25px #F1F8E9;
+    transform: rotate(360deg);
+    color: #28292a;
+}
+
+@keyframes left-in {
+    from {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes right-in {
+    from {
+        transform: translateX(200px);
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes bottom-in {
+    from {
+        transform: translateY(200px);
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes top-in {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.main-text {
+    animation: 1s left-in ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.sub-text {
+    animation: 1.2s left-in ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.social {
+    animation: 1s bottom-in ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.right img {
+    animation: 1s right-in ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.header-logo {
+    animation: 1.2s top-in ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+nav {
+    animation: 1.4s top-in ease-out forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+.head-cta {
+    animation: 1.6s top-in ease-out forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
+}
