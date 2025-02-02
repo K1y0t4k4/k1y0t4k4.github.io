@@ -14,7 +14,7 @@ for (let i=0; i < icons.length; i++) {
     icons[i].addEventListener(
         "click",
         function () {
-            window.location.href=hrefs[i]
+            window.location.href=hrefs[i];
         }
     );
 }
