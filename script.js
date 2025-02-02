@@ -8,7 +8,7 @@ toGithubBtn.addEventListener(
     }
 );
 
-const hrefs = ["https://www.facebook.com", "https://x.com", "https://www.instagram.com", "https://www.youtube.com"]
+const hrefs = ["https://www.facebook.com", "https://x.com", "https://www.instagram.com", "https://www.youtube.com"];
 const icons = document.querySelectorAll("[icon]");
 for (let i=0; i < icons.length; i++) {
     icons[i].addEventListener(
